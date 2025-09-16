@@ -1,0 +1,1614 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Georeferenciación de la tasa de deserción estudiantil en el sector oficial &#8212; Taller 2 - Georreferenciación</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Act3_code';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Interpretaciones y conclusiones finales" href="conclusiones.html" />
+    <link rel="prev" title="Taller #2 Georreferenciación con Datos Abiertos de Colombia" href="descripcion.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="descripcion.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Taller 2 - Georreferenciación</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="descripcion.html">
+                    Taller #2 Georreferenciación con Datos Abiertos de Colombia
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><em><strong>Georeferenciación de la tasa de deserción estudiantil en el sector oficial</strong></em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusiones.html"><em><strong>7. Interpretaciones y conclusiones finales</strong></em></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/mariangelmmu-cloud/DataViz_taller2_corte2" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mariangelmmu-cloud/DataViz_taller2_corte2/issues/new?title=Issue%20on%20page%20%2FAct3_code.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Act3_code.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Georeferenciación de la tasa de deserción estudiantil en el sector oficial</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importar-librerias"><em><strong>1. Importar librerías</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cargar-shapefile"><em><strong>2.Cargar shapefile</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cargar-dataset"><em><strong>3. Cargar dataset</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificar-datos-faltantes-y-duplicados"><em><strong>4. Verificar datos faltantes y duplicados</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merge-de-los-datasets"><em><strong>5. Merge de los datasets</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mapa-coropletico-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial"><em><strong>6. Mapa coroplético de la Tasa de deserción estudiantil en el sector oficial</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-por-departamento-en-2021"><em><strong>6.1. Tasa de deserción escolar por Departamento en 2021</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-por-departamento-en-2022"><em><strong>6.2. Tasa de deserción escolar por Departamento en 2022</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-por-departamento-en-2023"><em><strong>6.3. Tasa de deserción escolar por Departamento en 2023</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mapa-coropletico-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial-segun-el-nivel-de-estudio"><em><strong>6.4. Mapa coroplético de la Tasa de deserción estudiantil en el sector oficial según el nivel de estudio</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-transicion-por-departamento-en-2022"><em><strong>6.4.1. Tasa de deserción escolar en el nivel educativo transición por Departamento en 2022</strong></em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-primeraia-por-departamento-en-2022"><em><strong>6.4.2. Tasa de deserción escolar en el nivel educativo primeraia por Departamento en 2022</strong></em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-secundaria-por-departamento-en-2022"><em><strong>6.4.3. Tasa de deserción escolar en el nivel educativo secundaria por Departamento en 2022</strong></em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-media-por-departamento-en-2022"><em><strong>6.4.4. Tasa de deserción escolar en el nivel educativo media por Departamento en 2022</strong></em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="georeferenciacion-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial">
+<h1><em><strong>Georeferenciación de la tasa de deserción estudiantil en el sector oficial</strong></em><a class="headerlink" href="#georeferenciacion-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial" title="Link to this heading">#</a></h1>
+<section id="importar-librerias">
+<h2><em><strong>1. Importar librerías</strong></em><a class="headerlink" href="#importar-librerias" title="Link to this heading">#</a></h2>
+<p>En primer lugar se importan las librerías a usar en la actividad.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">missingno</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">msno</span> 
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>   
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="cargar-shapefile">
+<h2><em><strong>2.Cargar shapefile</strong></em><a class="headerlink" href="#cargar-shapefile" title="Link to this heading">#</a></h2>
+<p>Se define la ruta del archivo shapefile con <code class="docutils literal notranslate"><span class="pre">shapefile_path</span></code>, apuntando hacia un archivo .shp que contiene información geoespacial de los departamentos de Colombia. Finalmente, se carga ese archivo en un GeoDataFrame llamado <code class="docutils literal notranslate"><span class="pre">gdf</span></code> usando <code class="docutils literal notranslate"><span class="pre">gpd.read_file</span></code>, asegurando que los caracteres especiales se lean correctamente al especificar la codificación <code class="docutils literal notranslate"><span class="pre">utf-8</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> 
+<span class="n">shapefile_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\maria\OneDrive\Escritorio\Visualizacion_de_datos\MGN2021_DPTO_POLITICO\MGN_DPTO_POLITICO.shp&quot;</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">shapefile_path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DPTO_CCDGO</th>
+      <th>DPTO_CNMBR</th>
+      <th>DPTO_ANO_C</th>
+      <th>DPTO_ACT_A</th>
+      <th>DPTO_NAREA</th>
+      <th>DPTO_CSMBL</th>
+      <th>DPTO_VGNC</th>
+      <th>Shape_Leng</th>
+      <th>Shape_Area</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>05</td>
+      <td>ANTIOQUIA</td>
+      <td>1886</td>
+      <td>Constitucion Politica de 1886</td>
+      <td>62808.629597</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>21.492374</td>
+      <td>5.135236</td>
+      <td>POLYGON ((-76.41355 8.87383, -76.40465 8.85195...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>08</td>
+      <td>ATLÁNTICO</td>
+      <td>1910</td>
+      <td>Ley 21 de 1910</td>
+      <td>3314.447413</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>2.573162</td>
+      <td>0.273823</td>
+      <td>POLYGON ((-74.84946 11.09778, -74.84938 11.097...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>11</td>
+      <td>BOGOTÁ, D.C.</td>
+      <td>1538</td>
+      <td>Constitucion Politica de 1886</td>
+      <td>1622.852967</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>3.765324</td>
+      <td>0.132208</td>
+      <td>POLYGON ((-74.07059 4.82856, -74.07036 4.82856...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13</td>
+      <td>BOLÍVAR</td>
+      <td>1886</td>
+      <td>Constitucion Politica de 1886</td>
+      <td>26719.968143</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>16.233072</td>
+      <td>2.195639</td>
+      <td>MULTIPOLYGON (((-76.17318 9.38785, -76.17287 9...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>15</td>
+      <td>BOYACÁ</td>
+      <td>1886</td>
+      <td>Constitucion Politica de 1886</td>
+      <td>23138.048132</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>15.906491</td>
+      <td>1.888391</td>
+      <td>POLYGON ((-72.17368 7.05308, -72.17277 7.05224...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Observe que se llama al método <code class="docutils literal notranslate"><span class="pre">head()</span></code> sobre el GeoDataFrame <code class="docutils literal notranslate"><span class="pre">gdf</span></code>, lo que permite visualizar las primeras cinco filas del conjunto de datos cargado. Esta salida confirma que los datos se leyeron correctamente, mostrando columnas clave como el código y nombre del departamento, el año y acto legislativo de creación, el área en metros cuadrados, y campos geométricos como la longitud y el área de la figura. También se incluye el sistema de referencia y el año de la información geográfica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/19e97d81b9740a73219594afae8ece7f3dea7ccc54c96bfce59757f7d48a6e9c.png" src="_images/19e97d81b9740a73219594afae8ece7f3dea7ccc54c96bfce59757f7d48a6e9c.png" />
+</div>
+</div>
+<p>Observe que se utiliza el método <code class="docutils literal notranslate"><span class="pre">plot()</span></code> del GeoDataFrame <code class="docutils literal notranslate"><span class="pre">gdf</span></code> para generar una visualización del shapefile cargado anteriormente, que representa el mapa político de Colombia con sus divisiones departamentales. Luego, se llama a <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> para desplegar explícitamente la gráfica usando matplotlib. El resultado es una figura clara donde se visualizan los contornos de los departamentos del país, lo cual permite validar gráficamente que los datos geoespaciales fueron cargados correctamente y están listos para cruzarse con otros datos o usarse en análisis visuales.</p>
+</section>
+<section id="cargar-dataset">
+<h2><em><strong>3. Cargar dataset</strong></em><a class="headerlink" href="#cargar-dataset" title="Link to this heading">#</a></h2>
+<p>En esta sección, se carga la base de datos del conyexto elegido.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;MEN_ESTADISTICAS_EN_EDUCACION.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 429 entries, 0 to 428
+Data columns (total 37 columns):
+ #   Column                       Non-Null Count  Dtype  
+---  ------                       --------------  -----  
+ 0   AÑO                          429 non-null    int64  
+ 1   CÓDIGO_DEPARTAMENTO          429 non-null    int64  
+ 2   DEPARTAMENTO                 429 non-null    object 
+ 3   POBLACIÓN_5_16               429 non-null    int64  
+ 4   TASA_MATRICULACIÓN_5_16      429 non-null    object 
+ 5   COBERTURA_NETA               429 non-null    object 
+ 6   COBERTURA_NETA_TRANSICIÓN    429 non-null    object 
+ 7   COBERTURA_NETA_PRIMARIA      429 non-null    object 
+ 8   COBERTURA_NETA_SECUNDARIA    429 non-null    object 
+ 9   COBERTURA_NETA_MEDIA         429 non-null    object 
+ 10  COBERTURA_BRUTA              429 non-null    object 
+ 11  COBERTURA_BRUTA_TRANSICIÓN   429 non-null    object 
+ 12  COBERTURA_BRUTA_PRIMARIA     429 non-null    object 
+ 13  COBERTURA_BRUTA_SECUNDARIA   429 non-null    object 
+ 14  COBERTURA_BRUTA_MEDIA        429 non-null    object 
+ 15  TAMAÑO_PROMEDIO_DE_GRUPO     231 non-null    float64
+ 16  SEDES_CONECTADAS_A_INTERNET  231 non-null    float64
+ 17  DESERCIÓN                    429 non-null    object 
+ 18  DESERCIÓN_TRANSICIÓN         428 non-null    object 
+ 19  DESERCIÓN_PRIMARIA           429 non-null    object 
+ 20  DESERCIÓN_SECUNDARIA         429 non-null    object 
+ 21  DESERCIÓN_MEDIA              429 non-null    object 
+ 22  APROBACIÓN                   429 non-null    object 
+ 23  APROBACIÓN_TRANSICIÓN        429 non-null    object 
+ 24  APROBACIÓN_PRIMARIA          429 non-null    object 
+ 25  APROBACIÓN_SECUNDARIA        429 non-null    object 
+ 26  APROBACIÓN_MEDIA             429 non-null    object 
+ 27  REPROBACIÓN                  429 non-null    object 
+ 28  REPROBACIÓN_TRANSICIÓN       429 non-null    object 
+ 29  REPROBACIÓN_PRIMARIA         429 non-null    object 
+ 30  REPROBACIÓN_SECUNDARIA       429 non-null    object 
+ 31  REPROBACIÓN_MEDIA            429 non-null    object 
+ 32  REPITENCIA                   429 non-null    object 
+ 33  REPITENCIA_TRANSICIÓN        429 non-null    object 
+ 34  REPITENCIA_PRIMARIA          429 non-null    object 
+ 35  REPITENCIA_SECUNDARIA        429 non-null    object 
+ 36  REPITENCIA_MEDIA             429 non-null    object 
+dtypes: float64(2), int64(3), object(32)
+memory usage: 124.1+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Observe que se ha utilizado el método <code class="docutils literal notranslate"><span class="pre">.info()</span></code> para obtener una descripción general del DataFrame cargado anteriormente con estadísticas educativas. Esta salida muestra que el conjunto de datos tiene 429 filas y 37 columnas, todas con datos completos (sin valores nulos) excepto una: <code class="docutils literal notranslate"><span class="pre">SEDES_CONECTADAS_A_INTERNET</span></code>, que tiene 231 valores no nulos, lo que sugiere que habrá que tratar los valores faltantes si se piensa usar esta columna. También se puede ver el tipo de datos de cada columna, y destaca que la mayoría están clasificadas como <code class="docutils literal notranslate"><span class="pre">object</span></code>, lo cual es inadecuado para columnas que deberían ser numéricas, como tasas de cobertura o aprobación, por lo que probablemente será necesario convertirlas a <code class="docutils literal notranslate"><span class="pre">float</span></code> o <code class="docutils literal notranslate"><span class="pre">int</span></code> para poder hacer análisis cuantitativos. Además, se muestra el uso de memoria total del DataFrame, lo que ayuda a evaluar su tamaño y complejidad.</p>
+<p>Ahora, debido a que el objetivo del la actividad es construit mapas coropléticos, seleccionaré las varianles relacionadas con la <code class="docutils literal notranslate"><span class="pre">deserción</span> <span class="pre">escolar</span></code> para darle un mejor enfoque a la actividad.</p>
+<p>Se seleccionan las columnas del dataframe originsl con las que se trabajaré.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;AÑO&#39;</span><span class="p">,</span> <span class="s1">&#39;CÓDIGO_DEPARTAMENTO&#39;</span><span class="p">,</span> <span class="s1">&#39;DEPARTAMENTO&#39;</span><span class="p">,</span> <span class="s1">&#39;POBLACIÓN_5_16&#39;</span><span class="p">,</span> <span class="s1">&#39;DESERCIÓN&#39;</span><span class="p">,</span> <span class="s1">&#39;DESERCIÓN_TRANSICIÓN&#39;</span><span class="p">,</span> <span class="s1">&#39;DESERCIÓN_PRIMARIA&#39;</span><span class="p">,</span> <span class="s1">&#39;DESERCIÓN_SECUNDARIA&#39;</span><span class="p">,</span> <span class="s1">&#39;DESERCIÓN_MEDIA&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 429 entries, 0 to 428
+Data columns (total 9 columns):
+ #   Column                Non-Null Count  Dtype 
+---  ------                --------------  ----- 
+ 0   AÑO                   429 non-null    int64 
+ 1   CÓDIGO_DEPARTAMENTO   429 non-null    int64 
+ 2   DEPARTAMENTO          429 non-null    object
+ 3   POBLACIÓN_5_16        429 non-null    int64 
+ 4   DESERCIÓN             429 non-null    object
+ 5   DESERCIÓN_TRANSICIÓN  428 non-null    object
+ 6   DESERCIÓN_PRIMARIA    429 non-null    object
+ 7   DESERCIÓN_SECUNDARIA  429 non-null    object
+ 8   DESERCIÓN_MEDIA       429 non-null    object
+dtypes: int64(3), object(6)
+memory usage: 30.3+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Observe que se vuelve a utilizar el método <code class="docutils literal notranslate"><span class="pre">.info()</span></code> para verificar la estructura del nuevo DataFrame reducido. Se confirma que contiene 429 registros y 9 columnas, y que no existen valores nulos. También se puede ver que algunas columnas importantes como población o tasas de deserción están en formato <code class="docutils literal notranslate"><span class="pre">object</span></code>, lo que sugiere que se podría necesitar conversión a tipos numéricos (<code class="docutils literal notranslate"><span class="pre">int</span></code> o <code class="docutils literal notranslate"><span class="pre">float</span></code>) antes de realizar análisis estadísticos o visualizaciones cuantitativas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;ñ&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;ñ&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">unidecode</span><span class="w"> </span><span class="kn">import</span> <span class="n">unidecode</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">unidecode</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">unidecode</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aquí se aplica una serie de transformaciones para limpiar tanto los nombres de las columnas como los valores tipo string dentro del DataFrame. Primero, se convierten todos los nombres de columnas a minúsculas, se reemplaza la letra ñ por n y se cambian los espacios por guiones bajos para facilitar su manipulación en el código. Luego, se utiliza la librería <code class="docutils literal notranslate"><span class="pre">unidecode</span></code> para eliminar tildes tanto en los nombres de columnas como en los registros de texto, asegurando homogeneidad en los datos y evitando errores por caracteres especiales en futuras operaciones de filtrado o fusión con otros conjuntos de datos.</p>
+</section>
+<section id="verificar-datos-faltantes-y-duplicados">
+<h2><em><strong>4. Verificar datos faltantes y duplicados</strong></em><a class="headerlink" href="#verificar-datos-faltantes-y-duplicados" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Mapa de calor de valores faltantes&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/36e2aab141e8c0d4d075a03ab7ee1fb682ebf84718001dd7ee2f62b82f8fbdde.png" src="_images/36e2aab141e8c0d4d075a03ab7ee1fb682ebf84718001dd7ee2f62b82f8fbdde.png" />
+</div>
+</div>
+<p>La visualización revela que hay un único valor nulo en la columna <code class="docutils literal notranslate"><span class="pre">desercion_transicion</span></code>, ya que es la única que presenta una pequeña interrupción en su franja. Esta técnica es útil para detectar rápidamente si existe un problema de datos incompletos que deba corregirse antes del análisis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">faltantes</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">porcentaje</span> <span class="o">=</span> <span class="p">(</span><span class="n">faltantes</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">tabla_faltantes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Valores faltantes&#39;</span><span class="p">:</span> <span class="n">faltantes</span><span class="p">,</span>
+    <span class="s1">&#39;Porcentaje (%)&#39;</span><span class="p">:</span> <span class="n">porcentaje</span>
+<span class="p">})</span>
+
+<span class="c1"># Mostrar solo columnas con NA</span>
+<span class="n">tabla_faltantes</span> <span class="o">=</span> <span class="n">tabla_faltantes</span><span class="p">[</span><span class="n">tabla_faltantes</span><span class="p">[</span><span class="s1">&#39;Valores faltantes&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">tabla_faltantes</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Porcentaje (%)&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Valores faltantes</th>
+      <th>Porcentaje (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>desercion_transicion</th>
+      <td>1</td>
+      <td>0.2331</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Observe que se realiza un conteo exacto de los valores faltantes por columna mediante <code class="docutils literal notranslate"><span class="pre">df.isnull().sum()</span></code> y luego se calcula el porcentaje que representan sobre el total de registros. Esta información se organiza en un nuevo DataFrame (<code class="docutils literal notranslate"><span class="pre">tabla_faltantes</span></code>), que muestra únicamente las columnas que tienen valores nulos. Al ordenar por porcentaje descendente, se confirma que solo hay un valor faltante en <code class="docutils literal notranslate"><span class="pre">desercion_transicion</span></code>, lo cual representa aproximadamente un 0.23% del total de registros, una proporción mínima que puede tratarse fácilmente sin comprometer el análisis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aquí se toma la decisión de eliminar la fila que contiene el valor nulo utilizando <code class="docutils literal notranslate"><span class="pre">df.dropna()</span></code>. Dado que solo se trata de un registro faltante entre 429, esta acción es razonable y no afecta significativamente la integridad del conjunto de datos. Esta limpieza garantiza que no haya valores perdidos que puedan generar errores en etapas posteriores del análisis, como en cálculos estadísticos o visualizaciones.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">faltantes</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">porcentaje</span> <span class="o">=</span> <span class="p">(</span><span class="n">faltantes</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">tabla_faltantes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Valores faltantes&#39;</span><span class="p">:</span> <span class="n">faltantes</span><span class="p">,</span>
+    <span class="s1">&#39;Porcentaje (%)&#39;</span><span class="p">:</span> <span class="n">porcentaje</span>
+<span class="p">})</span>
+
+<span class="n">tabla_faltantes</span> <span class="o">=</span> <span class="n">tabla_faltantes</span><span class="p">[</span><span class="n">tabla_faltantes</span><span class="p">[</span><span class="s1">&#39;Valores faltantes&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">tabla_faltantes</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Porcentaje (%)&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Valores faltantes</th>
+      <th>Porcentaje (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>La tabla generada en esta ocasión no muestra columnas con valores faltantes, lo cual verifica que el DataFrame está limpio y completamente listo para el análisis.</p>
+</section>
+<section id="merge-de-los-datasets">
+<h2><em><strong>5. Merge de los datasets</strong></em><a class="headerlink" href="#merge-de-los-datasets" title="Link to this heading">#</a></h2>
+<p>En esta sección se preparan los datos provenientes de dos fuentes distintas (el DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code> con estadísticas educativas y el GeoDataFrame <code class="docutils literal notranslate"><span class="pre">gdf</span></code> con información geográfica) para unirlos en un solo conjunto. Para que esta unión funcione correctamente, es necesario asegurar que las columnas por las cuales se va a hacer el emparejamiento (merge) estén estandarizadas en cuanto a nombres, tipo de datos, uso de tildes, mayúsculas y caracteres especiales. Aquí se inicia ese proceso de inspección y limpieza.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;departamento&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0         antioquia
+1         atlantico
+2      bogota, d.c.
+3           bolivar
+4            boyaca
+           ...     
+424        amazonas
+425         guainia
+426        guaviare
+427          vaupes
+428         vichada
+Name: departamento, Length: 428, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se visualiza la columna <code class="docutils literal notranslate"><span class="pre">departamento</span></code> del DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>, que contiene los nombres de los departamentos en minúscula y sin tildes, gracias a las transformaciones realizadas anteriormente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;DPTO_CNMBR&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0                                             ANTIOQUIA
+1                                             ATLÁNTICO
+2                                          BOGOTÁ, D.C.
+3                                               BOLÍVAR
+4                                                BOYACÁ
+5                                                CALDAS
+6                                               CAQUETÁ
+7                                                 CAUCA
+8                                                 CESAR
+9                                               CÓRDOBA
+10                                         CUNDINAMARCA
+11                                                CHOCÓ
+12                                                HUILA
+13                                           LA GUAJIRA
+14                                            MAGDALENA
+15                                                 META
+16                                               NARIÑO
+17                                   NORTE DE SANTANDER
+18                                              QUINDIO
+19                                            RISARALDA
+20                                            SANTANDER
+21                                                SUCRE
+22                                               TOLIMA
+23                                      VALLE DEL CAUCA
+24                                               ARAUCA
+25                                             CASANARE
+26                                             PUTUMAYO
+27    ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANT...
+28                                             AMAZONAS
+29                                              GUAINÍA
+30                                             GUAVIARE
+31                                               VAUPÉS
+32                                              VICHADA
+Name: DPTO_CNMBR, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se imprime la columna <code class="docutils literal notranslate"><span class="pre">DPTO_CNMBR</span></code> del GeoDataFrame <code class="docutils literal notranslate"><span class="pre">gdf</span></code>, que también contiene los nombres de los departamentos, pero en este caso están escritos en mayúsculas y con tildes. Este contraste con respecto a la columna <code class="docutils literal notranslate"><span class="pre">departamento</span></code> deja claro que ambas columnas, aunque contienen el mismo tipo de información, no están listas aún para usarse como clave de unión, por lo que es necesario aplicar transformaciones de formato y normalización textual para igualarlas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdf</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;ñ&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">)</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;ñ&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">gdf</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">unidecode</span><span class="w"> </span><span class="kn">import</span> <span class="n">unidecode</span>
+
+<span class="n">gdf</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">unidecode</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">gdf</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">unidecode</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se realiza un proceso de limpieza y estandarización sobre el GeoDataFrame <code class="docutils literal notranslate"><span class="pre">gdf</span></code>, aplicando transformaciones similares a las que ya se hicieron en el DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>. Se convierte todo el texto a minúsculas, se reemplaza la letra ñ por n, se eliminan espacios y tildes en los nombres de columnas y también en los valores de las celdas que sean tipo string. Esto asegura que ambas fuentes tengan un formato homogéneo y que la columna de nombres de departamentos esté lista para ser usada en una fusión sin errores de coincidencia textual.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;departamento&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;antioquia&#39;, &#39;atlantico&#39;, &#39;bogota, d.c.&#39;, &#39;bolivar&#39;, &#39;boyaca&#39;,
+       &#39;caldas&#39;, &#39;caqueta&#39;, &#39;cauca&#39;, &#39;cesar&#39;, &#39;cordoba&#39;, &#39;cundinamarca&#39;,
+       &#39;choco&#39;, &#39;huila&#39;, &#39;la guajira&#39;, &#39;magdalena&#39;, &#39;meta&#39;, &#39;narino&#39;,
+       &#39;norte de santander&#39;, &#39;quindio&#39;, &#39;risaralda&#39;, &#39;santander&#39;, &#39;sucre&#39;,
+       &#39;tolima&#39;, &#39;valle del cauca&#39;, &#39;arauca&#39;, &#39;casanare&#39;, &#39;putumayo&#39;,
+       &#39;archipielago de san andres, providencia y santa catalina&#39;,
+       &#39;amazonas&#39;, &#39;guainia&#39;, &#39;guaviare&#39;, &#39;vaupes&#39;, &#39;vichada&#39;,
+       &#39;bogota, d,c,&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se listan los valores únicos de la columna <code class="docutils literal notranslate"><span class="pre">departamento</span></code> del DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>, lo cual permite verificar cómo están escritos los nombres de los departamentos luego de las transformaciones aplicadas previamente. Esta revisión es clave para detectar inconsistencias o errores que podrían afectar el proceso de fusión con el otro dataset. En este caso, se observa que “bogota, d.c.” aparece con una coma adicional que podría causar problemas al hacer el merge.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;dpto_cnmbr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;antioquia&#39;, &#39;atlantico&#39;, &#39;bogota, d.c.&#39;, &#39;bolivar&#39;, &#39;boyaca&#39;,
+       &#39;caldas&#39;, &#39;caqueta&#39;, &#39;cauca&#39;, &#39;cesar&#39;, &#39;cordoba&#39;, &#39;cundinamarca&#39;,
+       &#39;choco&#39;, &#39;huila&#39;, &#39;la guajira&#39;, &#39;magdalena&#39;, &#39;meta&#39;, &#39;narino&#39;,
+       &#39;norte de santander&#39;, &#39;quindio&#39;, &#39;risaralda&#39;, &#39;santander&#39;, &#39;sucre&#39;,
+       &#39;tolima&#39;, &#39;valle del cauca&#39;, &#39;arauca&#39;, &#39;casanare&#39;, &#39;putumayo&#39;,
+       &#39;archipielago de san andres, providencia y santa catalina&#39;,
+       &#39;amazonas&#39;, &#39;guainia&#39;, &#39;guaviare&#39;, &#39;vaupes&#39;, &#39;vichada&#39;],
+      dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se consultan los valores únicos de la columna <code class="docutils literal notranslate"><span class="pre">dpto_cnmb</span></code> del GeoDataFrame <code class="docutils literal notranslate"><span class="pre">gdf</span></code> para compararlos con los del DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>. El objetivo es comprobar si existen diferencias textuales entre ambas columnas que impidan una correcta coincidencia. Aunque en general los nombres parecen coincidir, la comparación permite detectar con precisión casos puntuales como el de Bogotá, que requiere corrección.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;departamento&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;departamento&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;bogota, d,c,&#39;</span><span class="p">,</span> <span class="s1">&#39;bogota, d.c.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se corrige explícitamente el valor mal formateado de “bogota, d.c.,” en la columna <code class="docutils literal notranslate"><span class="pre">departamento</span></code> reemplazándolo por la forma correcta “bogota, d.c.”. Esto resuelve el problema puntual detectado anteriormente y garantiza que el nombre del departamento coincida exactamente con el del shapefile, facilitando así una unión sin errores.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;departamento&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0         antioquia
+1         atlantico
+2      bogota, d.c.
+3           bolivar
+4            boyaca
+           ...     
+424        amazonas
+425         guainia
+426        guaviare
+427          vaupes
+428         vichada
+Name: departamento, Length: 428, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se imprime nuevamente la columna <code class="docutils literal notranslate"><span class="pre">departamento</span></code> para verificar que la corrección haya sido aplicada correctamente. Esta revisión confirma visualmente que el valor actualizado ya no contiene la coma adicional, lo que deja la columna lista para ser utilizada en la fusión con el GeoDataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;departamento&quot;</span><span class="p">:</span> <span class="s2">&quot;dpto_cnmbr&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se renombra la columna <code class="docutils literal notranslate"><span class="pre">departamento</span></code> en el DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code> por <code class="docutils literal notranslate"><span class="pre">dpto_cnmb</span></code>, con el objetivo de que coincida exactamente en nombre con la columna homóloga del GeoDataFrame <code class="docutils literal notranslate"><span class="pre">gdf</span></code>. Esta es una práctica necesaria en pandas para realizar la operación de merge, ya que ambas columnas deben tener el mismo nombre para que se reconozcan como clave de unión.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span><span class="s1">&#39;dpto_cnmbr&#39;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se realiza la fusión final de los dos datasets, <code class="docutils literal notranslate"><span class="pre">df</span></code> y <code class="docutils literal notranslate"><span class="pre">gdf</span></code>, utilizando la columna <code class="docutils literal notranslate"><span class="pre">dpto_cnmb</span></code> como clave común. El tipo de unión especificado es <code class="docutils literal notranslate"><span class="pre">outer</span></code>, lo que significa que se conservarán todos los registros de ambos datasets, incluso si no tienen correspondencia directa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dpto_ccdgo</th>
+      <th>dpto_cnmbr</th>
+      <th>dpto_ano_c</th>
+      <th>dpto_act_a</th>
+      <th>dpto_narea</th>
+      <th>dpto_csmbl</th>
+      <th>dpto_vgnc</th>
+      <th>shape_leng</th>
+      <th>shape_area</th>
+      <th>geometry</th>
+      <th>ano</th>
+      <th>codigo_departamento</th>
+      <th>poblacion_5_16</th>
+      <th>desercion</th>
+      <th>desercion_transicion</th>
+      <th>desercion_primaria</th>
+      <th>desercion_secundaria</th>
+      <th>desercion_media</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>91</td>
+      <td>amazonas</td>
+      <td>1991</td>
+      <td>dcto. 2274 del 4 de octubre de la constitucion...</td>
+      <td>109497.053788</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>25.355977</td>
+      <td>8.87748</td>
+      <td>POLYGON ((-71.14469 0.05572, -71.14508 0.05349...</td>
+      <td>2011</td>
+      <td>91</td>
+      <td>22223</td>
+      <td>5.46%</td>
+      <td>5.56%</td>
+      <td>3.67%</td>
+      <td>8.21%</td>
+      <td>7.9%</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>91</td>
+      <td>amazonas</td>
+      <td>1991</td>
+      <td>dcto. 2274 del 4 de octubre de la constitucion...</td>
+      <td>109497.053788</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>25.355977</td>
+      <td>8.87748</td>
+      <td>POLYGON ((-71.14469 0.05572, -71.14508 0.05349...</td>
+      <td>2012</td>
+      <td>91</td>
+      <td>22194</td>
+      <td>4.7%</td>
+      <td>5.16%</td>
+      <td>2.3%</td>
+      <td>7.97%</td>
+      <td>8.06%</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>91</td>
+      <td>amazonas</td>
+      <td>1991</td>
+      <td>dcto. 2274 del 4 de octubre de la constitucion...</td>
+      <td>109497.053788</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>25.355977</td>
+      <td>8.87748</td>
+      <td>POLYGON ((-71.14469 0.05572, -71.14508 0.05349...</td>
+      <td>2013</td>
+      <td>91</td>
+      <td>22123</td>
+      <td>3.29%</td>
+      <td>3.16%</td>
+      <td>1.82%</td>
+      <td>5.26%</td>
+      <td>5.57%</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>91</td>
+      <td>amazonas</td>
+      <td>1991</td>
+      <td>dcto. 2274 del 4 de octubre de la constitucion...</td>
+      <td>109497.053788</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>25.355977</td>
+      <td>8.87748</td>
+      <td>POLYGON ((-71.14469 0.05572, -71.14508 0.05349...</td>
+      <td>2014</td>
+      <td>91</td>
+      <td>22167</td>
+      <td>3.04%</td>
+      <td>2.97%</td>
+      <td>1.95%</td>
+      <td>4.67%</td>
+      <td>4.35%</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>91</td>
+      <td>amazonas</td>
+      <td>1991</td>
+      <td>dcto. 2274 del 4 de octubre de la constitucion...</td>
+      <td>109497.053788</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>25.355977</td>
+      <td>8.87748</td>
+      <td>POLYGON ((-71.14469 0.05572, -71.14508 0.05349...</td>
+      <td>2015</td>
+      <td>91</td>
+      <td>22212</td>
+      <td>4.76%</td>
+      <td>4.54%</td>
+      <td>2.53%</td>
+      <td>8%</td>
+      <td>6.69%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Se muestra una vista previa de las primeras filas del nuevo DataFrame <code class="docutils literal notranslate"><span class="pre">data</span></code> resultante del merge entre el shapefile (<code class="docutils literal notranslate"><span class="pre">gdf</span></code>) y los datos educativos (<code class="docutils literal notranslate"><span class="pre">df</span></code>). A partir del resultado se puede comprobar que la unión se ha realizado correctamente, ya que se observan tanto columnas del shapefile (como <code class="docutils literal notranslate"><span class="pre">geometry</span></code>, <code class="docutils literal notranslate"><span class="pre">shape_area</span></code>, <code class="docutils literal notranslate"><span class="pre">dpto_cmnb</span></code>) como columnas propias del dataset educativo (<code class="docutils literal notranslate"><span class="pre">año</span></code>, <code class="docutils literal notranslate"><span class="pre">deserción</span></code>, <code class="docutils literal notranslate"><span class="pre">poblacion_5_16</span></code>, etc.). Esto indica que la información espacial y estadística ha sido correctamente integrada en un solo DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dpto_ccdgo</th>
+      <th>dpto_cnmbr</th>
+      <th>dpto_ano_c</th>
+      <th>dpto_act_a</th>
+      <th>dpto_narea</th>
+      <th>dpto_csmbl</th>
+      <th>dpto_vgnc</th>
+      <th>shape_leng</th>
+      <th>shape_area</th>
+      <th>geometry</th>
+      <th>ano</th>
+      <th>codigo_departamento</th>
+      <th>poblacion_5_16</th>
+      <th>desercion</th>
+      <th>desercion_transicion</th>
+      <th>desercion_primaria</th>
+      <th>desercion_secundaria</th>
+      <th>desercion_media</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>423</th>
+      <td>99</td>
+      <td>vichada</td>
+      <td>1991</td>
+      <td>5 de julio constitucion politica de 1991</td>
+      <td>100063.370595</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>17.292613</td>
+      <td>8.10068</td>
+      <td>POLYGON ((-67.80972 6.32432, -67.80946 6.32432...</td>
+      <td>2019</td>
+      <td>99</td>
+      <td>33198</td>
+      <td>7.63%</td>
+      <td>7%</td>
+      <td>7.45%</td>
+      <td>8.96%</td>
+      <td>4.78%</td>
+    </tr>
+    <tr>
+      <th>424</th>
+      <td>99</td>
+      <td>vichada</td>
+      <td>1991</td>
+      <td>5 de julio constitucion politica de 1991</td>
+      <td>100063.370595</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>17.292613</td>
+      <td>8.10068</td>
+      <td>POLYGON ((-67.80972 6.32432, -67.80946 6.32432...</td>
+      <td>2020</td>
+      <td>99</td>
+      <td>33298</td>
+      <td>3.07%</td>
+      <td>2.88%</td>
+      <td>3.09%</td>
+      <td>3.3%</td>
+      <td>2.17%</td>
+    </tr>
+    <tr>
+      <th>425</th>
+      <td>99</td>
+      <td>vichada</td>
+      <td>1991</td>
+      <td>5 de julio constitucion politica de 1991</td>
+      <td>100063.370595</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>17.292613</td>
+      <td>8.10068</td>
+      <td>POLYGON ((-67.80972 6.32432, -67.80946 6.32432...</td>
+      <td>2021</td>
+      <td>99</td>
+      <td>33183</td>
+      <td>5.02%</td>
+      <td>4.5%</td>
+      <td>4%</td>
+      <td>7.65%</td>
+      <td>6.18%</td>
+    </tr>
+    <tr>
+      <th>426</th>
+      <td>99</td>
+      <td>vichada</td>
+      <td>1991</td>
+      <td>5 de julio constitucion politica de 1991</td>
+      <td>100063.370595</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>17.292613</td>
+      <td>8.10068</td>
+      <td>POLYGON ((-67.80972 6.32432, -67.80946 6.32432...</td>
+      <td>2022</td>
+      <td>99</td>
+      <td>33949</td>
+      <td>6.58%</td>
+      <td>5.15%</td>
+      <td>6.38%</td>
+      <td>7.65%</td>
+      <td>6.11%</td>
+    </tr>
+    <tr>
+      <th>427</th>
+      <td>99</td>
+      <td>vichada</td>
+      <td>1991</td>
+      <td>5 de julio constitucion politica de 1991</td>
+      <td>100063.370595</td>
+      <td>3</td>
+      <td>2021</td>
+      <td>17.292613</td>
+      <td>8.10068</td>
+      <td>POLYGON ((-67.80972 6.32432, -67.80946 6.32432...</td>
+      <td>2023</td>
+      <td>99</td>
+      <td>33816</td>
+      <td>6.8%</td>
+      <td>5.84%</td>
+      <td>6.78%</td>
+      <td>7.73%</td>
+      <td>4.54%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Se revisan las últimas filas del DataFrame <code class="docutils literal notranslate"><span class="pre">data</span></code> para confirmar que el contenido del merge también es consistente hacia el final de los registros. Los datos pertenecen al departamento de Vichada, con valores recientes hasta el año 2023, lo que demuestra que la cobertura temporal es amplia y actualizada. La visualización de estas filas permite identificar que no hay errores de unión ni registros vacíos al final del dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;dpto_ccdgo&#39;, &#39;dpto_cnmbr&#39;, &#39;dpto_ano_c&#39;, &#39;dpto_act_a&#39;, &#39;dpto_narea&#39;,
+       &#39;dpto_csmbl&#39;, &#39;dpto_vgnc&#39;, &#39;shape_leng&#39;, &#39;shape_area&#39;, &#39;geometry&#39;,
+       &#39;ano&#39;, &#39;codigo_departamento&#39;, &#39;poblacion_5_16&#39;, &#39;desercion&#39;,
+       &#39;desercion_transicion&#39;, &#39;desercion_primaria&#39;, &#39;desercion_secundaria&#39;,
+       &#39;desercion_media&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se listan los nombres de las columnas del DataFrame <code class="docutils literal notranslate"><span class="pre">data</span></code>, lo cual es útil para tener claridad sobre la estructura final del conjunto de datos después del merge. Se puede observar que el DataFrame incluye información tanto administrativa (como códigos, nombres y geometría de los departamentos) como educativa (tasas de deserción por nivel, población escolar, etc.), lo que confirma que está listo para análisis posteriores como visualizaciones geoespaciales o modelado estadístico.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ano&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ano&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;codigo_departamento&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;codigo_departamento&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;dpto_cnmbr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;dpto_cnmbr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;poblacion_5_16&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;poblacion_5_16&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;codigo_departamento&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;codigo_departamento&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="n">cols_porcentaje</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;desercion&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;desercion_transicion&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;desercion_primaria&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;desercion_secundaria&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;desercion_media&quot;</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols_porcentaje</span><span class="p">:</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+        <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;%&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  
+        <span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>                      
+        <span class="o">/</span> <span class="mi">100</span>                               
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se realiza la transformación de los tipos de datos en el DataFrame <code class="docutils literal notranslate"><span class="pre">data</span></code> para asegurar que las columnas relevantes tengan el formato correcto para análisis posteriores. La columna ‘año’ se convierte a tipo objeto para facilitar el filtrado por año, mientras que ‘codigo_departamento’ se estandariza en tipo string con relleno de ceros a la izquierda para asegurar uniformidad en los códigos. La población de 5 a 16 años se convierte a entero, y la columna de códigos del departamento se homogeniza en tipo objeto. Después, se define una lista con las columnas que contienen porcentajes de deserción escolar, se procede a limpiar el símbolo ‘%’ y convertir esos valores a proporciones decimales dividiendo por 100, lo que es fundamental para trabajar con datos numéricos en modelos o visualizaciones sin errores de tipo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_2023</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ano&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2023</span><span class="p">]</span>
+<span class="n">data_2022</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ano&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2022</span><span class="p">]</span>
+<span class="n">data_2021</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ano&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2021</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se filtra el DataFrame <code class="docutils literal notranslate"><span class="pre">data</span></code> para crear tres subconjuntos correspondientes a los años 2021, 2022 y 2023. Esto es útil para segmentar el análisis y comparar la evolución temporal de las variables relacionadas con la deserción escolar y población. Cada subconjunto contiene solo las filas correspondientes a su respectivo año, lo que facilita el análisis específico por periodo sin la necesidad de manipular el DataFrame completo.</p>
+</section>
+<section id="mapa-coropletico-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial">
+<h2><em><strong>6. Mapa coroplético de la Tasa de deserción estudiantil en el sector oficial</strong></em><a class="headerlink" href="#mapa-coropletico-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mapa</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columna</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">col_nombres</span><span class="o">=</span><span class="s2">&quot;dpto_cnmbr&quot;</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">))</span>
+    
+    <span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">column</span><span class="o">=</span><span class="n">columna</span><span class="p">,</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+        <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">columna</span><span class="p">,</span>
+            <span class="s1">&#39;orientation&#39;</span><span class="p">:</span> <span class="s2">&quot;horizontal&quot;</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+            <span class="n">row</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+            <span class="n">row</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+            <span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">col_nombres</span><span class="p">]),</span>
+            <span class="n">fontsize</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span>
+        <span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">titulo</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tasa-de-desercion-escolar-por-departamento-en-2021">
+<h3><em><strong>6.1. Tasa de deserción escolar por Departamento en 2021</strong></em><a class="headerlink" href="#tasa-de-desercion-escolar-por-departamento-en-2021" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa</span><span class="p">(</span><span class="n">data_2021</span><span class="p">,</span> <span class="s1">&#39;desercion&#39;</span><span class="p">,</span> <span class="s1">&#39;Tasa de deserción escolar por Departamento en 2021&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/eb03a540959f4ef01fcd48dbe255cf68fd3c4d737e9205a00e3f93cd5ed5eb63.png" src="_images/eb03a540959f4ef01fcd48dbe255cf68fd3c4d737e9205a00e3f93cd5ed5eb63.png" />
+</div>
+</div>
+<p>El mapa muestra claramente que la tasa de deserción escolar en 2021 varía significativamente entre los departamentos de Colombia. Las zonas con colores más oscuros, principalmente en el norte y algunas partes del centro, indican tasas bajas de deserción, mientras que los departamentos en el sur, como Putumayo y Caquetá, presentan las tasas más altas, reflejadas en colores amarillos y verdes claros. Esto sugiere que las regiones más alejadas o con condiciones socioeconómicas posiblemente más complejas enfrentan mayores dificultades para mantener a los estudiantes en el sistema educativo. La disparidad regional en la deserción escolar evidencia la necesidad de enfoques diferenciados para combatir este problema según las particularidades de cada departamento.</p>
+</section>
+<section id="tasa-de-desercion-escolar-por-departamento-en-2022">
+<h3><em><strong>6.2. Tasa de deserción escolar por Departamento en 2022</strong></em><a class="headerlink" href="#tasa-de-desercion-escolar-por-departamento-en-2022" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa</span><span class="p">(</span><span class="n">data_2022</span><span class="p">,</span> <span class="s1">&#39;desercion&#39;</span><span class="p">,</span> <span class="s1">&#39;Tasa de deserción escolar por Departamento en 2022&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/75ebbd708d6d43896212d4ba8f8e840999a4dc54c7695f2bb2a3569be3b7f030.png" src="_images/75ebbd708d6d43896212d4ba8f8e840999a4dc54c7695f2bb2a3569be3b7f030.png" />
+</div>
+</div>
+<p>Este mapa presenta la tasa de deserción escolar por departamento en 2022 y muestra un patrón similar al del año anterior, con variaciones notables en algunos departamentos. Se observa que departamentos como Guainía y Arauca mantienen altas tasas de deserción, reflejadas en tonos amarillos, mientras que la región norte y algunas partes del centro del país presentan tasas más bajas, evidenciadas por colores más oscuros. Hay departamentos como Antioquia y Valle del Cauca que muestran una mejora relativa en comparación con 2021, con colores más cercanos a los tonos azules, indicando menor deserción. Esto puede sugerir que ciertas políticas o intervenciones podrían estar funcionando en algunas regiones, aunque sigue existiendo una disparidad clara en la deserción escolar entre las diferentes zonas del país.</p>
+</section>
+<section id="tasa-de-desercion-escolar-por-departamento-en-2023">
+<h3><em><strong>6.3. Tasa de deserción escolar por Departamento en 2023</strong></em><a class="headerlink" href="#tasa-de-desercion-escolar-por-departamento-en-2023" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa</span><span class="p">(</span><span class="n">data_2023</span><span class="p">,</span> <span class="s1">&#39;desercion&#39;</span><span class="p">,</span> <span class="s1">&#39;Tasa de deserción escolar por Departamento en 2023&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/902f72c1b90f2e913fb1aed150206f63fcdfb6e744ca41f91b4509c04179647e.png" src="_images/902f72c1b90f2e913fb1aed150206f63fcdfb6e744ca41f91b4509c04179647e.png" />
+</div>
+</div>
+<p>Se observa que los departamentos con tasas más altas de deserción escolar, marcados en amarillo, son Caquetá y Vichada, lo que indica que en estos lugares la cantidad de estudiantes que abandonan el sistema educativo es relativamente mayor. En contraste, departamentos como Chocó, Nariño y Boyacá presentan tasas muy bajas, señaladas con tonos morados, sugiriendo mejores niveles de retención escolar. La mayor parte del centro del país, incluyendo Bogotá, Cundinamarca y Antioquia, tiene tasas moderadas, con colores verde-azulados, lo que refleja una situación intermedia en cuanto a deserción. Este patrón puede estar influenciado por factores socioeconómicos, geográficos y de acceso a servicios educativos, ya que las zonas con mayor deserción suelen corresponder a regiones con condiciones más desfavorables o de difícil acceso.</p>
+</section>
+<section id="mapa-coropletico-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial-segun-el-nivel-de-estudio">
+<h3><em><strong>6.4. Mapa coroplético de la Tasa de deserción estudiantil en el sector oficial según el nivel de estudio</strong></em><a class="headerlink" href="#mapa-coropletico-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial-segun-el-nivel-de-estudio" title="Link to this heading">#</a></h3>
+<p>Debido a que, como se obsservó anteriormente, en el año 2022 se presentaron tasas más altas de deserción, se observará la tasa de deserción según la etapa escolar: transición, primaria, secundaria y media.</p>
+<section id="tasa-de-desercion-escolar-en-el-nivel-educativo-transicion-por-departamento-en-2022">
+<h4><em><strong>6.4.1. Tasa de deserción escolar en el nivel educativo transición por Departamento en 2022</strong></em><a class="headerlink" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-transicion-por-departamento-en-2022" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa</span><span class="p">(</span><span class="n">data_2022</span><span class="p">,</span> <span class="s1">&#39;desercion_transicion&#39;</span><span class="p">,</span> <span class="s1">&#39;Tasa de deserción escolar en el nivel educativo transición por Departamento en 2022&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/47ab7d9fd50c164ddde884361f6362405c1aaa31d7d7a2f830a895e6f1b87b07.png" src="_images/47ab7d9fd50c164ddde884361f6362405c1aaa31d7d7a2f830a895e6f1b87b07.png" />
+</div>
+</div>
+<p>Se aprecia que departamentos como Nariño, Quindío, y Chocó presentan las tasas más bajas de deserción en transición, con colores que se acercan al extremo izquierdo de la escala, reflejando valores cercanos o por debajo del 2%. En contraste, departamentos como Arauca y Caquetá destacan con tasas altas, evidenciadas por los tonos amarillos intensos que superan el 7%. El centro del país, incluyendo Bogotá, Cundinamarca y Santander, muestra tasas intermedias, lo que sugiere una situación de deserción menos crítica pero aún presente. En el oriente del país, Vichada y Guainía también presentan valores relativamente altos. Este patrón geográfico sugiere que los territorios más apartados o con menor desarrollo institucional pueden estar enfrentando mayores dificultades para garantizar la permanencia de los niños en esta primera etapa del sistema educativo formal.</p>
+</section>
+<section id="tasa-de-desercion-escolar-en-el-nivel-educativo-primeraia-por-departamento-en-2022">
+<h4><em><strong>6.4.2. Tasa de deserción escolar en el nivel educativo primeraia por Departamento en 2022</strong></em><a class="headerlink" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-primeraia-por-departamento-en-2022" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa</span><span class="p">(</span><span class="n">data_2022</span><span class="p">,</span> <span class="s1">&#39;desercion_primaria&#39;</span><span class="p">,</span> <span class="s1">&#39;Tasa de deserción escolar en el nivel educativo primeraia por Departamento en 2022&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/8beb9dec3bfe63ae59582fc269732cb305884d8605fd13643b279caabc5dd6ca.png" src="_images/8beb9dec3bfe63ae59582fc269732cb305884d8605fd13643b279caabc5dd6ca.png" />
+</div>
+</div>
+<p>Se identifica que la mayoría de los departamentos se concentran en rangos bajos a medios, con una presencia marcada de colores morados y azul oscuro, especialmente en regiones como Nariño, Chocó, Quindío, Boyacá, y Antioquia, lo que sugiere un buen nivel de permanencia estudiantil en esta etapa del sistema educativo. Arauca vuelve a destacar negativamente, con una tasa considerablemente alta, evidenciada por un color amarillo brillante que indica una deserción cercana o superior al 7%. Vichada también muestra una tasa elevada, mientras que regiones del sur como Caquetá y Putumayo reflejan niveles medios. En general, el patrón espacial sugiere que, aunque la mayoría del país mantiene tasas relativamente bajas de deserción en primaria, todavía existen zonas críticas en el oriente del país donde el abandono escolar sigue siendo un desafío importante en esta etapa educativa clave.</p>
+</section>
+<section id="tasa-de-desercion-escolar-en-el-nivel-educativo-secundaria-por-departamento-en-2022">
+<h4><em><strong>6.4.3. Tasa de deserción escolar en el nivel educativo secundaria por Departamento en 2022</strong></em><a class="headerlink" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-secundaria-por-departamento-en-2022" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa</span><span class="p">(</span><span class="n">data_2022</span><span class="p">,</span> <span class="s1">&#39;desercion_secundaria&#39;</span><span class="p">,</span> <span class="s1">&#39;Tasa de deserción escolar en el nivel educativo secundaria por Departamento en 2022&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/953b58e872393c5f10bb49ef64547e28831f267fc0ddf83fe9300347d5c85439.png" src="_images/953b58e872393c5f10bb49ef64547e28831f267fc0ddf83fe9300347d5c85439.png" />
+</div>
+</div>
+<p>En este mapa se representa la tasa de deserción escolar en el nivel de secundaria por departamento en Colombia para el año 2022. Guainía destaca de forma evidente con una de las tasas de deserción más altas del país en secundaria, superando el 10%, seguida por departamentos como Amazonas y Caquetá, que también presentan valores altos reflejados en tonos verdes claros y amarillos. En contraste, regiones como Bogotá, Boyacá, Santander, Nariño y Chocó se mantienen en rangos bajos, evidenciados por tonalidades moradas, lo cual indica una retención escolar relativamente favorable en esa etapa. La tendencia general muestra que la deserción tiende a aumentar en las zonas más periféricas o con menor cobertura educativa continua, lo que sugiere que las barreras de acceso, permanencia o calidad del servicio educativo se acentúan en la medida en que los estudiantes avanzan hacia niveles superiores como la secundaria.</p>
+</section>
+<section id="tasa-de-desercion-escolar-en-el-nivel-educativo-media-por-departamento-en-2022">
+<h4><em><strong>6.4.4. Tasa de deserción escolar en el nivel educativo media por Departamento en 2022</strong></em><a class="headerlink" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-media-por-departamento-en-2022" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapa</span><span class="p">(</span><span class="n">data_2022</span><span class="p">,</span> <span class="s1">&#39;desercion_media&#39;</span><span class="p">,</span> <span class="s1">&#39;Tasa de deserción escolar en el nivel educativo media por Departamento en 2022&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cb7448b7598328b487f5c6b173d27359c80de68dcffdd95be490d5a571c7f3e6.png" src="_images/cb7448b7598328b487f5c6b173d27359c80de68dcffdd95be490d5a571c7f3e6.png" />
+</div>
+</div>
+<p>Este mapa presenta la tasa de deserción escolar en el nivel de educación media por departamento en Colombia durante el año 2022, utilizando una escala de color que va del morado (tasas más bajas) al amarillo (tasas más altas). Se observa que el departamento de Amazonas resalta con la mayor tasa de deserción en el país, claramente visible en un tono amarillo intenso que indica un valor superior al 7%. También se identifican niveles elevados en Caquetá y Putumayo, mientras que departamentos del centro como Bogotá, Cundinamarca, y algunos del Caribe como Atlántico y Bolívar, presentan tasas significativamente más bajas, lo cual se refleja en colores morados y azul oscuro. Magdalena, en contraste con sus vecinos, también destaca con una tasa alta que no es común en la región norte. En general, la tendencia muestra que, en esta etapa final del sistema escolar, los niveles de abandono aumentan en regiones más periféricas o con limitaciones estructurales para garantizar continuidad educativa, lo que podría estar asociado a factores como la necesidad de ingresar al mercado laboral, baja oferta de media académica o técnica, o dificultades socioeconómicas locales.</p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="descripcion.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Taller #2 Georreferenciación con Datos Abiertos de Colombia</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="conclusiones.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><em><strong>7. Interpretaciones y conclusiones finales</strong></em></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importar-librerias"><em><strong>1. Importar librerías</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cargar-shapefile"><em><strong>2.Cargar shapefile</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cargar-dataset"><em><strong>3. Cargar dataset</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificar-datos-faltantes-y-duplicados"><em><strong>4. Verificar datos faltantes y duplicados</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merge-de-los-datasets"><em><strong>5. Merge de los datasets</strong></em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mapa-coropletico-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial"><em><strong>6. Mapa coroplético de la Tasa de deserción estudiantil en el sector oficial</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-por-departamento-en-2021"><em><strong>6.1. Tasa de deserción escolar por Departamento en 2021</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-por-departamento-en-2022"><em><strong>6.2. Tasa de deserción escolar por Departamento en 2022</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-por-departamento-en-2023"><em><strong>6.3. Tasa de deserción escolar por Departamento en 2023</strong></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mapa-coropletico-de-la-tasa-de-desercion-estudiantil-en-el-sector-oficial-segun-el-nivel-de-estudio"><em><strong>6.4. Mapa coroplético de la Tasa de deserción estudiantil en el sector oficial según el nivel de estudio</strong></em></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-transicion-por-departamento-en-2022"><em><strong>6.4.1. Tasa de deserción escolar en el nivel educativo transición por Departamento en 2022</strong></em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-primeraia-por-departamento-en-2022"><em><strong>6.4.2. Tasa de deserción escolar en el nivel educativo primeraia por Departamento en 2022</strong></em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-secundaria-por-departamento-en-2022"><em><strong>6.4.3. Tasa de deserción escolar en el nivel educativo secundaria por Departamento en 2022</strong></em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-desercion-escolar-en-el-nivel-educativo-media-por-departamento-en-2022"><em><strong>6.4.4. Tasa de deserción escolar en el nivel educativo media por Departamento en 2022</strong></em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mariangel Mercado
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
